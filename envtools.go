@@ -9,16 +9,20 @@ import (
 
 var (
 	knownStrings = map[string]bool{
-		"true":  true,
-		"t":     true,
-		"yes":   true,
-		"y":     true,
-		"on":    true,
-		"false": false,
-		"f":     false,
-		"no":    false,
-		"n":     false,
-		"off":   false,
+		"true":     true,
+		"t":        true,
+		"yes":      true,
+		"y":        true,
+		"on":       true,
+		"enable":   true,
+		"enabled":  true,
+		"false":    false,
+		"f":        false,
+		"no":       false,
+		"n":        false,
+		"off":      false,
+		"disable":  false,
+		"disabled": false,
 	}
 )
 
