@@ -5,6 +5,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"testing"
 )
 
 var (
@@ -32,6 +33,15 @@ func MustGetenv(key string) string {
 		panic(fmt.Sprintf("environment variable must be set: %s\n", key))
 	}
 	return v
+}
+
+func MustGetenvInTest(t testing.TB, key string) string {
+	t.Helper()
+	val := os.Getenv(key)
+	if val == "" {
+		t.Fatalf("environment variable must be set: %v", key)
+	}
+	return val
 }
 
 func IsTruthy(key string) bool {
