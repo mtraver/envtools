@@ -6,6 +6,10 @@ import (
 	"testing"
 )
 
+func IsSet(key string) bool {
+	return os.Getenv(key) != ""
+}
+
 func MustGetenv(key string) string {
 	v := os.Getenv(key)
 	if v == "" {
